@@ -3,6 +3,14 @@
 ## What I built
 A command-line chatbot in Python. You type a message, it is sent to Google's `gemini-2.5-flash` model, and the answer is streamed back into the terminal. The full conversation is saved to a JSON file, so the bot remembers earlier messages even after you restart the program.
 
+## Technology used
+- **Python 3.9+**: main programming language
+- **Google Gemini API (`gemini-2.5-flash`)**: the AI model that generates the responses
+- **OpenAI Python SDK (`openai`)**: used as the HTTP client, connected to Gemini's OpenAI-compatible endpoint
+- **python-dotenv**: loads the API key, endpoint, and model name from a `.env` file
+- **JSON**: stores the conversation history in `chat_history.json`
+- **Git & GitHub**: version control and hosting
+
 **Features**
 - End-to-end chat: input → API → response → display
 - Conversation history (sent with every request, saved to `chat_history.json`)
