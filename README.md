@@ -11,7 +11,7 @@ A command-line chatbot in Python. You type a message, it is sent to Google's `ge
 - **JSON**: stores the conversation history in `chat_history.json`
 - **Git & GitHub**: version control and hosting
 
-**Features**
+## **Features**
 - End-to-end chat: input → API → response → display
 - Conversation history (sent with every request, saved to `chat_history.json`)
 - System prompt to set the bot's behaviour
