@@ -110,6 +110,4 @@ The variable is called `OPENAI_API_KEY` because the OpenAI library looks for tha
 - Deploy the app online
 
 ## Screenshot
-_Add a screenshot of the chatbot running here, for example:_
-
-`![Chatbot screenshot](screenshot.png)`
+<img width="1911" height="902" alt="image" src="https://github.com/user-attachments/assets/1e0f13da-8186-48a4-bf25-bf467ed93b28" />
