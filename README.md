@@ -1,12 +1,11 @@
 # AI Chatbot (Web UI)
 
 ## What I built
-A single-page chatbot with a ChatGPT-style interface. You type a message in the browser, a small Python server sends it to Google's `gemini-2.5-flash` model, and the answer is streamed back and displayed on the page as it is written. The conversation is saved to a JSON file and reloaded automatically whenever the page is opened, so the chat continues where you left off.
+A single-page chatbot. You type a message in the browser, a small Python server sends it to Google's `gemini-2.5-flash` model, and the answer is streamed back and displayed on the page as it is written. The conversation is saved to a JSON file and reloaded automatically whenever the page is opened, so the chat continues where you left off.
 
 This started as a command-line chatbot and was then converted into a web app with an HTML/CSS/JavaScript front end.
 
 **Features**
-- Clean, ChatGPT-style chat interface (dark theme, centered conversation, message composer at the bottom)
 - Streaming responses with a typing indicator
 - Conversation history saved to `chat_history.json` and loaded when the page opens
 - System prompt to set the bot's behaviour
@@ -25,18 +24,6 @@ This started as a command-line chatbot and was then converted into a web app wit
 - **JSON**: stores the conversation history
 - **Git & GitHub**: version control and hosting
 
-## Project structure
-```
-.
-├── app.py              # Flask backend: serves the page, calls Gemini, stores history
-├── requirements.txt    # Python dependencies
-├── .env.example        # Template for your environment variables
-├── .gitignore
-└── static/
-    ├── index.html      # Page structure
-    ├── style.css       # Styling
-    └── script.js       # Chat logic: loads history, sends messages, shows streamed replies
-```
 
 ## How to run
 
@@ -67,12 +54,11 @@ Then open **http://localhost:5000** in your browser.
 Get a free API key from [Google AI Studio](https://aistudio.google.com) and add it to `.env`:
 
 ```
-OPENAI_API_KEY=your-gemini-api-key
+Gemini_API_KEY=your-gemini-api-key
 OPENAI_BASE_URL=https://generativelanguage.googleapis.com/v1beta/openai/
 MODEL=gemini-2.5-flash
 ```
 
-The variable is called `OPENAI_API_KEY` because the OpenAI library looks for that name, but the value is your **Gemini** key.
 
 ## API integration approach
 1. **Browser to server:** `script.js` sends the user's message to the Flask backend with `POST /api/chat`. The browser never talks to Gemini directly, so the API key stays on the server and is never exposed.
