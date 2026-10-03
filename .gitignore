@@ -1,4 +1,15 @@
+# Secrets
 .env
+
+# Chat history (personal conversations)
 chat_history.json
+
+# Python
 __pycache__/
+*.pyc
 venv/
+.venv/
+
+# Editor / OS
+.vscode/
+.DS_Store

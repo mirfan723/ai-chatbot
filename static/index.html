@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Chatbot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>AI Chatbot</h1>
+    <button id="clear" type="button">New chat</button>
+  </header>
+
+  <main id="chat" aria-live="polite">
+    <div id="empty">
+      <h2>What can I help with?</h2>
+      <p>Ask a question to start. Your conversation is saved and reloads next time.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="composer">
+      <textarea id="input" rows="1" placeholder="Message the chatbot" aria-label="Message"></textarea>
+      <button id="send" type="button" aria-label="Send message">&#8593;</button>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
